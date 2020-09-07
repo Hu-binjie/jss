@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    function foo(){
+      var getName=function(){console.log(1,this)}
+      getName()
+      return this
+    }
+    foo.getName=function(){console.log(2)}
+    foo.prototype.getName=function(){console.log(3);}
+    var getName=function(){console.log(4)}
+    function getName(){console.log(5)}
+
+    foo.getName();
+    getName();
+    foo().getName();
+    getName();
+    new foo().getName()
+    //依次写出打印结果
+
+  </script>
+</body>
+
+</html>

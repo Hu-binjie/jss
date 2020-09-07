@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+
+    /* .box{
+        width: 200px;
+        height: 200px;
+        background: red;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-top: -100px;
+        margin-left: -100px;
+       } */
+
+/* 不定宽的居中方法 */
+
+/* 定位布局 */
+    /* .wrap{
+            width: 300px;
+          height: 300px;  
+        position: relative;
+          border: 1px solid red;
+       }
+       .box{
+          width: 100px;
+          height: 200px;
+          background:red;
+          position: absolute;
+          top: 0;
+          right: 0;
+          left: 0;
+          bottom: 0;
+          margin: auto;
+       } */
+/* grid和flex布局 */
+    /* .wrap{
+            width: 300px;
+          height: 300px;  
+          display: grid;||flex
+          border: 1px solid red;
+       }
+       .box{
+          width: 100px;
+          height: 200px;
+          background:red;
+          margin: auto;
+       } */
+
+
+/* 利用二维坐标 transform移动 ,translate中的xy位移量是相当于移动元素的自身宽高的百分比*/
+    /* .wrap {
+        width: 300px;
+        height: 300px;
+        border: 1px solid red;
+        position: relative;
+    }
+
+    .box {
+        width: 100px;
+          height: 200px;
+          background:red;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } */
+</style>
+
+<body>
+    <!--  -->
+    <div class="wrap">
+        <div class="box"></div>
+    </div>
+
+</body>
+
+</html>

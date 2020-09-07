@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let 人类={
+            class:'人类',
+            type:{
+                1:'白种人',
+                2:'黄种人',
+                3:'黑人'
+            },
+            job:'做人',
+            
+        }
+
+//for...in...递归
+        function copy(obj) {
+            let newObj = Array.isArray(obj)?[]:{};
+            for (let key in obj) {
+                if (obj.hasOwnProperty(key)) {
+                    if (typeof obj[key] === "object") {
+                        newObj[key] = copy(obj[key]);
+                    } else {
+                        newObj[key] = obj[key];
+                    }
+                }
+            }
+            return newObj;
+        }
+        let 小明=copy(人类);
+        
+        小明.job='吃饭';
+        小明.type={
+            1:'混血人'
+        };
+        console.log(小明);
+        console.log(人类);
+
+//黑科技     注意拷贝对象中不能有废JOSN格式的类型(函数方法不能处理)
+       /*let 小明=JSON.parse(JSON.stringify(人类))
+        小明.job='吃饭';
+        小明.type={
+            1:'混血人'
+        }
+        console.log(小明);
+
+        console.log(人类);*/
+    </script>
+</body>
+
+</html>

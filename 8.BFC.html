@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fixclear::after,
+        .fixclear::before{
+            content: "";
+            display:table;
+            clear:both ;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        触发BFC
+            浮动元素   float:left / right  (none不会触发)
+            绝对定位   position:absolute / fixed
+               display：inline-block / table-cells / flex
+               overflow:hidden / auto / scroll    (visible不会触发)
+        BFC特性的应用
+            解决margin重叠的问题
+            解决子元素的margin传递给父元素的问题
+            清除浮动带来的高度塌陷问题
+            
+     -->
+</body>
+</html>

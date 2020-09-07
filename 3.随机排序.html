@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr=[1,5,6,8,2,7,8,9,256,636];
+        //sort进行排序
+        /*
+        arr.sort((n1,n2)=>Math.random()-0.5)
+        console.log(arr);*/
+
+        //递归
+        /*let arr2=[];
+        (function(){
+        if(arr.length==0){return}//递归结束条件
+            let index=Math.floor(Math.random()*arr.length);
+        arr2=arr2.concat(arr.splice(index,1));
+        //在内部调用这个函数实现递归
+        arguments.callee();
+        })();
+        
+        console.log(arr2);*/
+        
+        //迭代
+        /*let arr2=[];
+        let len=arr.length;
+
+        for(let i=0;i<len;i++){
+            let index=Math.floor(Math.random()*arr.length);
+            arr2=arr2.concat(arr.splice(index,1));
+        }
+        console.log(arr2);*/
+
+        //洗牌
+        let temp=0;
+        function fn(){
+        for(let i=0;i<arr.length;i++){
+        let index=Math.floor(Math.random()*arr.length);
+        temp=arr[i];
+        arr[i]=arr[index];
+        arr[index]=temp;
+        }
+        console.log(arr);
+        }
+        fn()
+        // console.time();
+        // for(let i=1;i<10000;i++){
+        //     fn()
+        // }
+        // console.timeEnd();
+     
+    </script>
+</body>
+</html>
